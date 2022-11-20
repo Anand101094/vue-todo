@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="app__wrapper w-1/2 p-2 border border-solid rounded-lg border-slate-300 relative">
+    <div class="app__wrapper w-full  mx-4 md:m-0 md:w-1/2 p-2 border border-solid rounded-lg border-slate-300 relative">
       <div class=" flex relative">
         <input type="text" v-model="searchText" placeholder="Search Todos..."
           class="border rounded-sm border-slate-300 p-2 w-full mb-8" />
@@ -246,6 +246,7 @@ export default {
       this.todoList = todoItems;
     }
 
+    this.checkReminders();
     setInterval(this.checkReminders, 15000);
   }
 }
@@ -266,6 +267,7 @@ export default {
 
 .app__wrapper {
   height: 600px;
+  max-width: 600px;
   max-height: 80vh;
 }
 </style>
